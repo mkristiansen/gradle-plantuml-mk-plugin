@@ -1,6 +1,6 @@
-package com.praqma.demo
+package com.github.mkristiansen.gradle
 
-import com.praqma.demo.greeting.GreetingModule
+import com.github.mkristiansen.gradle.greeting.GreetingModule
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 
@@ -10,7 +10,7 @@ import org.gradle.api.Project
  * https://docs.gradle.org/3.5/userguide/custom_plugins.html#sec:writing_a_simple_plugin
  * Example 41.1
  */
-public class DemoPlugin implements Plugin<Project>{
+public class PlantUMLPlugin implements Plugin<Project>{
 
     /**
      * Applies this plugin to the given Gradle project

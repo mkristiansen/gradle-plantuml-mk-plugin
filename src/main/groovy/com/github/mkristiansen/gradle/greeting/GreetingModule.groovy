@@ -1,4 +1,4 @@
-package com.praqma.demo.greeting
+package com.github.mkristiansen.gradle.greeting
 
 import org.gradle.api.Project
 

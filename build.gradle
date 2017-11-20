@@ -33,20 +33,20 @@ dependencies {
 // * * * * * * * * * * * *
 
 project.description     = 'Demo plugin to use as a starting point for custom plugin development'
-project.group           = 'com.praqma'
-project.version         = '1.0.0'
+project.group           = 'com.github.mkristiansen'
+project.version         = '0.0.1'
 
-project.ext.name        = 'demo'
-project.ext.pluginId    = 'com.praqma.demo.DemoPlugin'
-project.ext.scm         = 'scm:git@github.com:Praqma/gradle-plugin-bootstrap.git'
-project.ext.url         = 'https://github.com/Praqma/gradle-plugin-bootstrap'
+project.ext.name        = 'gradle-plantuml-mk-plugin'
+project.ext.pluginId    = 'com.github.mkristiansen.gradle.PlantUMLPlugin'
+project.ext.scm         = 'scm:git@github.com:mkristiansen/gradle-plantuml-mk-pluginp.git'
+project.ext.url         = 'https://github.com/mkristiansen/gradle-plantuml-mk-plugin'
 
 // Configuration for: java-gradle-plugin
 gradlePlugin {
     plugins {
-        demoPlugin {
+        PlantUMLPlugin {
             id = project.pluginId
-            implementationClass = 'com.praqma.demo.DemoPlugin'
+            implementationClass = 'com.github.mkristiansen.gradle.PlantUMLPlugin'
         }
     }
 }
@@ -68,7 +68,7 @@ pluginBundle {
     tags = ['demo', 'example', 'quickstart']
 
     plugins {
-        demoPlugin {
+        PlantUMLPlugin {
             displayName = 'Demo Custom Gradle Plugin '
             description = project.description
             id          = project.pluginId
