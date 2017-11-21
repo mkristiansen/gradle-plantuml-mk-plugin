@@ -33,11 +33,11 @@ dependencies {
 // * * * * * * * * * * * *
 
 project.description     = 'Demo plugin to use as a starting point for custom plugin development'
-project.group           = 'com.github.mkristiansen'
+project.group           = 'io.kristiansen'
 project.version         = '0.0.1'
 
 project.ext.name        = 'gradle-plantuml-mk-plugin'
-project.ext.pluginId    = 'com.github.mkristiansen.gradle.PlantUMLPlugin'
+project.ext.pluginId    = 'io.kristiansen.gradle.PlantUMLPlugin'
 project.ext.scm         = 'scm:git@github.com:mkristiansen/gradle-plantuml-mk-pluginp.git'
 project.ext.url         = 'https://github.com/mkristiansen/gradle-plantuml-mk-plugin'
 
@@ -46,7 +46,7 @@ gradlePlugin {
     plugins {
         PlantUMLPlugin {
             id = project.pluginId
-            implementationClass = 'com.github.mkristiansen.gradle.PlantUMLPlugin'
+            implementationClass = 'io.kristiansen.gradle.PlantUMLPlugin'
         }
     }
 }

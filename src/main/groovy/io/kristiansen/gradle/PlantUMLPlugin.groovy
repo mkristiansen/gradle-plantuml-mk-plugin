@@ -1,6 +1,6 @@
-package com.github.mkristiansen.gradle
+package io.kristiansen.gradle
 
-import com.github.mkristiansen.gradle.greeting.GreetingModule
+import io.kristiansen.gradle.greeting.GreetingModule
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 

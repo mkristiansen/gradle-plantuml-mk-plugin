@@ -1,4 +1,4 @@
-package com.github.mkristiansen.gradle.greeting
+package io.kristiansen.gradle.greeting
 
 import org.gradle.api.DefaultTask
 import org.gradle.api.GradleException

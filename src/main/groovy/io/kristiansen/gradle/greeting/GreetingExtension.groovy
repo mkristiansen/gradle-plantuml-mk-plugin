@@ -1,4 +1,4 @@
-package com.github.mkristiansen.gradle.greeting
+package io.kristiansen.gradle.greeting
 
 /**
  * An extension object for the Greeting module

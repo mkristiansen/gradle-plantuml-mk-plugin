@@ -12,11 +12,11 @@ If you use IntelliJ I also recommend the [PlantUML plugin](https://github.com/es
 
 ```gradle
 plugins {
-  id "com.github.mkristiansen.gradle.PlantUMLPlugin" version "0.0.1"
+  id "io.kristiansen.gradle.PlantUMLPlugin" version "0.0.1"
 }
 ```
 
-You can also apply it with the 'old' Gradle syntax. See the [plugin page](https://plugins.gradle.org/plugin/com.github.mkristiansen.gradle.PlantUMLPlugin).
+You can also apply it with the 'old' Gradle syntax. See the [plugin page](https://plugins.gradle.org/plugin/io.`kristiansen.gradle.PlantUMLPlugin).
 
 Place uml files in `${projectDir}/assets/` and then
 
