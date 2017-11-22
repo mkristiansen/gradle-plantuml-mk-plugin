@@ -8,4 +8,11 @@
 gradle-app.setting
 !gradle-wrapper.jar
 
+# VS Code
+.vscode/
+
+# Eclipse
+.classpath
+.project
+.settings/
 bin/
