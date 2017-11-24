@@ -23,8 +23,8 @@ repositories {
 }
 
 dependencies {
-    compile     gradleApi()
-    testCompile gradleTestKit()
+    compile 'commons-io:commons-io:2.4'
+    compile 'net.sourceforge.plantuml:plantuml:8059'
     testCompile 'junit:junit:4+'
 }
 
@@ -32,12 +32,12 @@ dependencies {
 // Project configuration
 // * * * * * * * * * * * *
 
-project.description     = 'Demo plugin to use as a starting point for custom plugin development'
-project.group           = 'io.kristiansen'
+project.description     = 'Gradle plugin to render ASCII PlantUML files into images'
+project.group           = 'io.kristiansen.gradle'
 project.version         = '0.0.1'
 
-project.ext.name        = 'gradle-plantuml-mk-plugin'
-project.ext.pluginId    = 'io.kristiansen.gradle.PlantUMLPlugin'
+project.ext.name        = 'gradle-plantuml-plugin'
+project.ext.pluginId    =  project.group + '.PlantUMLPlugin'
 project.ext.scm         = 'scm:git@github.com:mkristiansen/gradle-plantuml-mk-pluginp.git'
 project.ext.url         = 'https://github.com/mkristiansen/gradle-plantuml-mk-plugin'
 
@@ -45,7 +45,7 @@ project.ext.url         = 'https://github.com/mkristiansen/gradle-plantuml-mk-pl
 gradlePlugin {
     plugins {
         PlantUMLPlugin {
-            id = project.pluginId
+            id = project.ext.pluginId
             implementationClass = 'io.kristiansen.gradle.PlantUMLPlugin'
         }
     }
@@ -65,11 +65,11 @@ gradlePlugin {
 pluginBundle {
     website = project.url
     vcsUrl = project.scm
-    tags = ['demo', 'example', 'quickstart']
+    tags = ['plantuml', 'plugin']
 
     plugins {
-        PlantUMLPlugin {
-            displayName = 'Demo Custom Gradle Plugin '
+        PlantUML {
+            displayName = 'Render ascii PlantUML files into images'
             description = project.description
             id          = project.pluginId
         }
