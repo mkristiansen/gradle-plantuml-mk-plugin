@@ -1,32 +1,45 @@
 ---
 maintainer: mkristiansen
 ---
-# Gradle PlantUML Plugin
 
-======================
-Renders plant.uml files in a project as part of a gradle build.
-More about [PlantUML on Wikipedia](http://en.wikipedia.org/wiki/PlantUML).
-If you use IntelliJ I also recommend the [PlantUML plugin](https://github.com/esteinberg/plantuml4idea).
+ <b>~*~ mkristiansen/gradle-plugin-mk-plantuml ~*~</b>
 
-## Usage
+Plugin to render [PlantUML](http://en.wikipedia.org/wiki/PlantUML) diagrams as part of a Gradle build.
+You may also want to install the plugin for your favorite IDE / Editor:
+- Eclipse
+- [IntelliJ](https://github.com/esteinberg/plantuml4idea)
+- [Visual Studo Code](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml)
+- Atom
 
-```gradle
-plugins {
+
+<b>installation</b>
+
+- Add the plugin to gradle.build with the 'new' syntax
+  ```gradle
+  plugins {
   id "io.kristiansen.gradle.PlantUMLPlugin" version "0.0.1"
-}
-```
+  }
+  ```
+- Add the plugin to gradle.build with the 'old' syntax. See the [plugin page](https://plugins.gradle.org/plugin/io.kristiansen.gradle.PlantUMLPlugin).
 
-You can also apply it with the 'old' Gradle syntax. See the [plugin page](https://plugins.gradle.org/plugin/io.`kristiansen.gradle.PlantUMLPlugin).
 
-Place uml files in `${projectDir}/assets/` and then
+<b>usage</b>
 
-```bash
-gradle renderPlantUml
-```
+- Place *.puml files in `${projectDir}/assets/` and run
 
-Rendered PNGs and SVGs placed alongside uml.
+  ```bash
+  gradle renderPlantUml
+  ```
 
-## License
+  Rendered PNGs and SVGs are placed alongside uml.
+
+- Remove all rendered images by running
+
+  ```bash
+  gradle cleanPlantUml
+  ```
+
+<b>license</b>
 
 ```license
 The MIT License (MIT)
