@@ -5,22 +5,26 @@ maintainer: mkristiansen
  <b>~*~ mkristiansen/gradle-plugin-mk-plantuml ~*~</b>
 
 Plugin to render [PlantUML](http://en.wikipedia.org/wiki/PlantUML) diagrams as part of a Gradle build.
+
 You may also want to install the plugin for your favorite IDE / Editor:
 - Eclipse
 - [IntelliJ](https://github.com/esteinberg/plantuml4idea)
 - [Visual Studo Code](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml)
 - Atom
 
+<b>about</b>
+
+macod
 
 <b>installation</b>
 
-- Add the plugin to gradle.build with the 'new' syntax
+- Add the plugin to `gradle.build` with the 'new' syntax
   ```gradle
   plugins {
-  id "io.kristiansen.gradle.PlantUMLPlugin" version "0.0.1"
+    id "io.kristiansen.gradle.PlantUMLPlugin" version "0.0.1"
   }
   ```
-- Add the plugin to gradle.build with the 'old' syntax. See the [plugin page](https://plugins.gradle.org/plugin/io.kristiansen.gradle.PlantUMLPlugin).
+- Add the plugin to `gradle.build` with the 'old' syntax. See the [plugin page](https://plugins.gradle.org/plugin/io.kristiansen.gradle.PlantUMLPlugin).
 
 
 <b>usage</b>
@@ -31,7 +35,7 @@ You may also want to install the plugin for your favorite IDE / Editor:
   gradle renderPlantUml
   ```
 
-  Rendered PNGs and SVGs are placed alongside uml.
+  Rendered PNGs and SVGs are placed alongside the puml files.
 
 - Remove all rendered images by running
 

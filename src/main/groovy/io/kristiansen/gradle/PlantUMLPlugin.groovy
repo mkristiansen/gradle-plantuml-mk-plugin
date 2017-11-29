@@ -66,6 +66,25 @@ class RenderPlantUmlTask extends DefaultTask {
         assetsPath.resolve(destName + extension)
     }
 
+    def renderFile(String source, File path, FileFormatOption format) {
+        Path projectPath = project.projectDir.toPath()
+        SourceStringReader reader = new SourceStringReader(source)
+
+        Path destPath
+        if (format.getFileFormat() == FileFormat.PNG)
+        {
+            destPath = getDestination(path, '.png')
+            println format.getFileFormat()
+        }
+        else if (format.getFileFormat() == FileFormat.SVG)
+        {
+            destPath = getDestination(path, '.svg')
+            println format.getFileFormat()
+        }
+
+        println "Rendering ${projectPath.relativize(destPath)}"
+        reader.generateImage(new FileOutputStream(destPath.toFile()), format)
+    }
 
     @TaskAction
     def render() {
@@ -75,15 +94,8 @@ class RenderPlantUmlTask extends DefaultTask {
             String relPumlPath = projectPath.relativize(puml.toPath()).toString()
             String pumlContent = new String(Files.readAllBytes(puml.toPath()), 'UTF-8')
 
-            SourceStringReader reader = new SourceStringReader(pumlContent)
-            Path destPathSvg = getDestination(puml, '.svg')
-            println "Rendering ${relPumlPath} to ${projectPath.relativize(destPathSvg)}"
-            reader.generateImage(new FileOutputStream(destPathSvg.toFile()), new FileFormatOption(FileFormat.SVG))
-
-            reader = new SourceStringReader(pumlContent)
-            Path destPathPng = getDestination(puml, '.png')
-            println "Rendering ${relPumlPath} to ${projectPath.relativize(destPathPng)}"
-            reader.generateImage(new FileOutputStream(destPathPng.toFile()), new FileFormatOption(FileFormat.PNG))
+            renderFile(pumlContent, puml, new FileFormatOption(FileFormat.SVG))
+            renderFile(pumlContent, puml, new FileFormatOption(FileFormat.PNG))
         }
 
     }
