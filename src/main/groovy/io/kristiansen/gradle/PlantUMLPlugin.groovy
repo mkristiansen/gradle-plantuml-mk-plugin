@@ -70,17 +70,8 @@ class RenderPlantUmlTask extends DefaultTask {
         Path projectPath = project.projectDir.toPath()
         SourceStringReader reader = new SourceStringReader(source)
 
-        Path destPath
-        if (format.getFileFormat() == FileFormat.PNG)
-        {
-            destPath = getDestination(path, '.png')
-            println format.getFileFormat()
-        }
-        else if (format.getFileFormat() == FileFormat.SVG)
-        {
-            destPath = getDestination(path, '.svg')
-            println format.getFileFormat()
-        }
+        Path destPath = getDestination(path, format.getFileFormat().getFileSuffix())
+        println format.getFileFormat().getFileSuffix()
 
         println "Rendering ${projectPath.relativize(destPath)}"
         reader.generateImage(new FileOutputStream(destPath.toFile()), format)
