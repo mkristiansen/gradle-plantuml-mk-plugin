@@ -46,7 +46,7 @@ gradlePlugin {
     plugins {
         PlantUMLPlugin {
             id = project.ext.pluginId
-            implementationClass = 'io.kristiansen.gradle.PlantUMLPlugin'
+            implementationClass = 'io.kristiansen.gradle.plantuml.PlantUMLPlugin'
         }
     }
 }
