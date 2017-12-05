@@ -16,3 +16,7 @@ gradle-app.setting
 .project
 .settings/
 bin/
+
+# Project Specific
+.svg
+.png
