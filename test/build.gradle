@@ -1,0 +1,3 @@
+plugins {
+  id "io.kristiansen.gradle.PlantUMLPlugin" version "0.0.1"
+}

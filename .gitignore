@@ -18,5 +18,5 @@ gradle-app.setting
 bin/
 
 # Project Specific
-.svg
-.png
+*.svg
+*.png
